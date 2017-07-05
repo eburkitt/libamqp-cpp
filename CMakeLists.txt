@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 
 project(libamqp-cpp)
 
+set(Boost_USE_STATIC_LIBS ON) # only find static libs
 find_package(Boost 1.46.1 COMPONENTS system thread REQUIRED)
 include_directories(${Boost_INCLUDE_DIR})
 

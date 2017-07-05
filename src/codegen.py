@@ -1,3 +1,6 @@
+import sys
+#sys.path.insert(0, '../../../rabbitmq-codegen')
+sys.path.insert(0, 'C:/Users/evanb.ES01/Documents/GitHub/libamqp-cpp/src/rabbitmq-codegen')
 from amqp_codegen import *
 
 def sanitizeName(specName):

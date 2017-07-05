@@ -22,6 +22,7 @@ amqp-rabbitmq-0.9.1.json
 *sdf
 *.sln
 *.suo
+.vs/
 x64/
 ipch/
 Debug/
