@@ -22,7 +22,7 @@ frame_writer::buffer_sequence_t frame_writer::get_sequence(const frame::ptr_t& f
 
   wireformat::write_uint8(os, static_cast<uint8_t>(frame->get_type()));
   wireformat::write_uint16(os, frame->get_channel());
-  wireformat::write_uint32(os, frame->get_shared_buffer()->get_size());
+  wireformat::write_uint32(os, static_cast<uint32_t>(frame->get_shared_buffer()->get_size()));
 
   char* ptr = frame->get_shared_buffer()->get_data();
   size_t val = frame->get_shared_buffer()->get_size();

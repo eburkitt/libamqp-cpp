@@ -148,7 +148,7 @@ boost::shared_ptr<channel> connection_impl::open_channel()
   boost::shared_future<bool> connection_closed_future = m_thread.get_connection_closed_future();
 
   // If something and an exception gets put in a future, this will throw that exception
-  unsigned int res = boost::wait_for_any(channel_open_future, connection_closed_future);
+  auto res = boost::wait_for_any(channel_open_future, connection_closed_future);
   return new_channel;
 }
 
